@@ -1,0 +1,50 @@
+/*reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+/*html*/
+html{
+    scroll-behavior: smooth;
+
+}
+/*body*/
+body{
+    background: var(--dark);
+    color: var(--white);
+    font-family: var(--text-font);
+    overflow-x: hidden;
+
+}
+/*imagenes*/
+img{
+    display: block;
+    max-width: 100%;
+
+}
+/*enlaces*/
+a{
+    text-decoration: none;
+    color: inherit;
+
+}
+/*listas*/
+ul{
+    list-style: none;
+
+}
+/*botones*/
+button{
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+
+}
+/*contenedor*/
+.container{
+    width:min(1200px,90%);
+    margin: auto;
+    
+}
