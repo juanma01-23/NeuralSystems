@@ -1,0 +1,26 @@
+/*variables globales*/
+:root{
+    /*colores*/
+    --primary-color:#0f172a;
+    --secondary-color:#1e293b;
+    --accent-color:#d4af37;
+    --accent-blue:#38bdf8;
+    --white:#f8fafc;
+    --gray:#cbd5e1;
+    --dark:#020617;
+
+    /*tipografia*/
+    --title-font:"cinzel",serif;
+    --text-font:"poppins",sans-serif;
+
+    /*sombras*/
+    --shadow:
+    0 10px 30px rgba(0,0,0,.35);
+
+    /*bordes*/
+    --radius:15px;
+
+    /*transiciones*/
+    --transition:.4s ease;
+
+}
