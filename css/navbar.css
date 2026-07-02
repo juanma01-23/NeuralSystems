@@ -1,0 +1,50 @@
+.header{
+    position: fixed;
+    width: 100%;
+    top:0;
+    left:0;
+    z-index: 1000;
+
+}
+
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    padding:25px 0;
+
+}
+
+.logo{
+    display:flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--title-font);
+    font-size: 1.3rem;
+    color:var(--accent-color);
+    font-weight: bold;
+
+}
+
+.logo i{
+    font-size: 1.7rem;
+
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+
+}
+
+.nav-links a{
+    position: relative;
+    transition: var(--transition);
+
+}
+
+.nav-links a:hover{
+    color:var(--accent-color);
+    
+}
+    
