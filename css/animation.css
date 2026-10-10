@@ -1,0 +1,29 @@
+@keyframes starsMove{
+    from{
+        transform:translateY(0)
+    }
+    to{
+        transform:translateY(-200px);
+    }
+}
+
+@keyframes fog{
+    from{
+        transform:scale(1);
+    }
+    to{
+        transform:scale(1.2);
+    }
+}
+
+@keyframes arrow{
+    0%{
+        transform:translate(-50%,0);
+    }
+    50%{
+        transform:translate(-50%,12px);
+    }
+    100%{
+        transform:translate(-50%,0);
+    }
+}
