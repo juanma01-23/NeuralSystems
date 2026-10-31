@@ -1,0 +1,16 @@
+
+:root {
+    --color-black: #08080c;
+    --color-black-soft: #100c12;
+    --color-panel: #151018;
+    --color-pink: #f36aa8;
+    --color-pink-dark: #8d315d;
+    --color-text: #f5edf2;
+    --color-muted: #b6aab5;
+    --color-border: rgba(243, 106, 168, 0.22);
+    --font-title: "Cinzel", serif;
+    --font-body: "Poppins", sans-serif;
+    --container-width: 1200px;
+    --header-height: 86px;
+    --transition: 0.35s ease;
+}

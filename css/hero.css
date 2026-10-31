@@ -1,0 +1,182 @@
+.hero {
+    position: relative;
+    min-height: 100vh;
+    padding-top:calc(var(--header-height) + 60px);
+    padding-bottom: 80px;
+}
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+
+    background-image: url("../assets/images/icons/inicio.hero.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter:saturate(1.15) contrast(1.08);
+}
+
+.hero-shade {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8, 8, 12, 0.83) 0%,
+            rgba(8, 8, 12, 0.40) 48%,
+            rgba(8, 8, 12, 0.18) 100%
+        ),
+        linear-gradient(
+            0deg,
+            #08080C 0%,
+            transparent 35%,
+            rgba(8, 8, 12, 0.10) 100%
+        );
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 8%;
+    left: 35%;
+    width: 55%;
+    height: 70%;
+    pointer-events: none;
+
+    background: radial-gradient(
+        ellipse,
+        rgba(243, 106, 168, 0.25) 0%,
+        rgba(243, 106, 168, 0.10) 35%,
+        transparent 72%
+    );
+
+    filter: blur(35px);
+    animation: umbraAura 7s ease-in-out infinite alternate;
+}
+
+.hero-content h1 span {
+    color: #F36AA8;
+    text-shadow:
+        0 0 12px rgba(243, 106, 168, 0.65),
+        0 0 35px rgba(243, 106, 168, 0.30);
+}
+
+.hero .eyebrow {
+    color: #F36AA8;
+    text-shadow: 0 0 12px rgba(243, 106, 168, 0.45);
+}
+
+.hero-button {
+    border: 1px solid #F36AA8;
+    color: #F36AA8;
+    background: rgba(8, 8, 12, 0.75);
+    box-shadow: 0 0 18px rgba(243, 106, 168, 0.12);
+    transition: all 0.35s ease;
+}
+
+.hero-button:hover {
+    color: #08080C;
+    background: #F36AA8;
+    box-shadow:
+        0 0 20px rgba(243, 106, 168, 0.45),
+        0 0 45px rgba(243, 106, 168, 0.20);
+}
+
+.hero-divider i,
+.hero-divider span,
+.scroll-indicator,
+.hero-bottom {
+    color: #F36AA8;
+}
+
+.hero-divider span {
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #F36AA8
+    );
+}
+
+@keyframes umbraAura {
+    from {
+        opacity: 0.55;
+        transform: scale(0.94);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.08);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero::before {
+        animation: none;
+    }
+}
+
+.hero-shade {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8, 8, 12, 0.88) 0%,
+            rgba(8, 8, 12, 0.48) 50%,
+            rgba(8, 8, 12, 0.20) 100%
+        ),
+        linear-gradient(
+            0deg,
+            #08080c 0%,
+            transparent 40%,
+            rgba(8, 8, 12, 0.15) 100%
+        );
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+
+    top: 10%;
+    left: 35%;
+
+    width: 55%;
+    height: 75%;
+
+    pointer-events: none;
+
+    background: radial-gradient(
+        ellipse,
+        rgba(243, 106, 168, 0.25) 0%,
+        rgba(243, 106, 168, 0.10) 40%,
+        transparent 75%
+    );
+
+    filter: blur(45px);
+
+    animation: umbraAura 7s ease-in-out infinite alternate;
+}
+
+@keyframes umbraAura {
+
+    from {
+        opacity: 0.5;
+        transform: scale(0.94);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.08);
+    }
+
+}

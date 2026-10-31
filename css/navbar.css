@@ -1,0 +1,152 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 80%;
+    height: var(--header-height);
+    padding: 0 7%;
+
+    background: rgba(8, 8, 12, 0.88);
+    border-bottom: 1px solid var(--color-border);
+
+    backdrop-filter: blur(12px);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    color: var(--color-text);
+    font-family: var(--font-title);
+    font-size: 1.15rem;
+    letter-spacing: 2px;
+}
+
+.logo b {
+    color: var(--color-pink);
+    font-weight: 600;
+
+    text-shadow:
+        0 0 10px rgba(243, 106, 168, 0.35);
+}
+
+.logo-symbol {
+    color: var(--color-pink);
+    font-size: 1.6rem;
+
+    text-shadow:
+        0 0 12px rgba(243, 106, 168, 0.65);
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.navigation a {
+    position: relative;
+
+    color: var(--color-muted);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+
+    transition: color var(--transition);
+}
+
+.navigation a::after {
+    content: "";
+
+    position: absolute;
+    bottom: -9px;
+    left: 0;
+
+    width: 0;
+    height: 1px;
+
+    background: var(--color-pink);
+    box-shadow: 0 0 8px var(--color-pink);
+
+    transition: width var(--transition);
+}
+
+.navigation a:hover,
+.navigation a.active {
+    color: var(--color-pink);
+}
+
+.navigation a:hover::after,
+.navigation a.active::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 35px;
+    height: 35px;
+
+    color: var(--color-pink);
+    background: transparent;
+
+    border: 1px solid var(--color-border);
+    cursor: pointer;
+
+    transition: all var(--transition);
+}
+
+.menu-toggle:hover {
+    background: rgba(243, 106, 168, 0.1);
+    border-color: var(--color-pink);
+}
+
+@media (max-width: 850px) {
+
+    .header {
+        padding: 0 5%;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .navigation {
+        position: absolute;
+        top: var(--header-height);
+        left: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+
+        width: 100%;
+        padding: 35px 20px;
+
+        background: rgba(8, 8, 12, 0.98);
+        border-bottom: 1px solid var(--color-border);
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+
+        transition: all var(--transition);
+    }
+
+    .navigation.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
