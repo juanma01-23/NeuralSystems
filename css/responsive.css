@@ -1,0 +1,23 @@
+@media (max-width: 900px) {
+
+    .entities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .entities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .entity-image {
+        height: 280px;
+    }
+
+    .entities-catalog {
+        padding: 75px 7%;
+    }
+
+}
