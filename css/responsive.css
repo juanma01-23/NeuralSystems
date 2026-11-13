@@ -21,3 +21,64 @@
     }
 
 }
+@media (max-width: 800px) {
+
+    .entity-detail-hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 140px 7% 70px;
+    }
+
+    .entity-detail-image {
+        height: 420px;
+        max-width: 100%;
+    }
+
+    .entity-history {
+        padding: 75px 7%;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .symbolism-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .entity-symbolism {
+        padding: 75px 7%;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .entity-sources {
+        padding: 75px 7%;
+    }
+
+    .source-item {
+        gap: 18px;
+        padding: 25px 10px;
+    }
+
+    .source-item h3 {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .entity-index {
+        gap: 15px;
+        padding: 18px 10px;
+    }
+
+    .index-label {
+        width: 100%;
+        text-align: center;
+    }
+
+    .entity-index a {
+        font-size: 0.62rem;
+    }
+}

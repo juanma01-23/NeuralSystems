@@ -59,3 +59,41 @@ if (hero && heroBackground) {
     });
 
 }
+
+const indexLinks = document.querySelectorAll(".entity-index a");
+
+const entitySections = document.querySelectorAll(
+    "#registro-historico, #simbolismo, #fuentes"
+);
+
+if (indexLinks.length && entitySections.length) {
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+
+        entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+
+                indexLinks.forEach((link) => {
+                    link.classList.remove("active");
+                });
+
+                const activeLink = document.querySelector(
+                    `.entity-index a[href="#${entry.target.id}"]`
+                );
+
+                if (activeLink) {
+                    activeLink.classList.add("active");
+                }
+            }
+
+        });
+
+    }, {
+        rootMargin: "-25% 0px -55% 0px"
+    });
+
+    entitySections.forEach((section) => {
+        sectionObserver.observe(section);
+    });
+}
